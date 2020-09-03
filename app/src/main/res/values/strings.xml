@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Book Food</string>
+    <string name="inka_restaurant">Inka Restaurant</string>
+    <string name="rating_values">5.0 (200+)</string>
+    <string name="pipe_symbol">|</string>
+    <string name="open_timings">All days: 9.00 AM - 6.00 PM</string>
+    <string name="reach_us_at">Reach us at: 9878754242</string>
+    <string name="_9876543210">9876543210</string>
+    <string name="book_a_table">Book A Table</string>
+    <string name="place_order">Place Order</string>
+    <string name="menu">MENU</string>
+    <string name="my_cart">My Cart</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="show_more">Show More</string>
+    <string name="delivery_options">Delivery Options</string>
+    <string name="dine_in">Dine-In</string>
+    <string name="take_way">Take Way</string>
+    <string name="n">N</string>
+    <string name="d">D</string>
+    <string name="decrease">-</string>
+    <string name="increase">+</string>
+    <string name="add">Add</string>
+    <string name="currency">€</string>
+    <string name="starter">Starter</string>
+    <string name="view_cart">View Cart</string>
+    <string name="items">(%s ITEMS)</string>
+    <string name="pls_select_one_product">Please select atleast one item to view cart</string>
+    <string name="review_orders">Review Orders</string>
+</resources>

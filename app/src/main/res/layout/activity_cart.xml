@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cart.CartActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160cdp"
+        android:background="@color/text_color"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_24cdp"
+                android:layout_height="@dimen/_24cdp"
+                android:layout_marginStart="@dimen/_8cdp"
+                android:layout_marginTop="@dimen/_16cdp"
+                android:src="@drawable/back_arrow_svg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblMyCart"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_16cdp"
+                android:drawablePadding="@dimen/_8cdp"
+                android:text="@string/my_cart"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18csp"
+                app:layout_constraintBottom_toBottomOf="@id/imgBack"
+                app:layout_constraintStart_toEndOf="@id/imgBack"
+                app:layout_constraintTop_toTopOf="@id/imgBack" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consPaymentDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32cdp"
+                android:layout_marginBottom="@dimen/_16cdp"
+                android:background="@drawable/constraint_layout_bg"
+                android:elevation="@dimen/_8cdp"
+                android:paddingHorizontal="@dimen/_32cdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintCircleRadius="@dimen/_85cdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/lblTotalCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8cdp"
+                    android:text="@string/total_cost"
+                    android:textColor="@color/menu_bg"
+                    android:textSize="@dimen/_14csp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8cdp"
+                    android:layout_marginBottom="@dimen/_8cdp"
+                    android:text="@string/rating_values"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_18csp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblTotalCost" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_60cdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblReviewOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12cdp"
+                android:text="@string/review_orders"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_16csp"
+                app:layout_constraintStart_toStartOf="@id/itemListRecyclerView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemListRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8cdp"
+                android:layout_marginTop="@dimen/_8cdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblReviewOrder" />
+
+            <TextView
+                android:id="@+id/lblShowMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4cdp"
+                android:layout_marginEnd="@dimen/_8cdp"
+                android:text="@string/show_more"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14csp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemListRecyclerView" />
+
+            <TextView
+                android:id="@+id/lblDeliveryOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8cdp"
+                android:layout_marginTop="@dimen/_16cdp"
+                android:text="@string/delivery_options"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16csp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblShowMore" />
+
+            <TextView
+                android:id="@+id/lblDineIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/dining_menu_svg"
+                android:drawablePadding="@dimen/_8cdp"
+                android:text="@string/dine_in"
+                android:layout_marginStart="@dimen/_16cdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14csp"
+                app:layout_constraintBottom_toBottomOf="@id/radioBtnDineIn"
+                app:layout_constraintEnd_toStartOf="@id/radioBtnDineIn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/radioBtnDineIn" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnDineIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12cdp"
+                app:layout_constraintEnd_toStartOf="@id/lblTakeAway"
+                app:layout_constraintStart_toEndOf="@id/lblDineIn"
+                app:layout_constraintTop_toBottomOf="@id/lblDeliveryOptions" />
+
+            <TextView
+                android:id="@+id/lblTakeAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16cdp"
+                android:drawableStart="@drawable/dining_menu_svg"
+                android:drawablePadding="@dimen/_8cdp"
+                android:text="@string/take_way"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14csp"
+                app:layout_constraintBottom_toBottomOf="@id/radioBtnDineIn"
+                app:layout_constraintEnd_toStartOf="@id/radioBtnTakeAway"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/radioBtnDineIn"
+                app:layout_constraintTop_toTopOf="@id/radioBtnDineIn" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnTakeAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12cdp"
+                android:layout_marginEnd="@dimen/_16cdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/lblTakeAway"
+                app:layout_constraintTop_toBottomOf="@id/lblDeliveryOptions" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50cdp"
+        android:background="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/lblPlaceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_order"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16csp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

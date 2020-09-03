@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8cdp"
+        android:layout_marginTop="@dimen/_16cdp"
+        android:layout_marginEnd="@dimen/_4cdp"
+        android:text="Item name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/items_txt"
+        android:textSize="@dimen/_14csp"
+        app:layout_constraintEnd_toStartOf="@+id/consQty"
+        app:layout_constraintStart_toEndOf="@id/lblN"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblN"
+        android:layout_width="@dimen/_16cdp"
+        android:layout_height="@dimen/_24cdp"
+        android:layout_marginStart="@dimen/_2cdp"
+        android:background="@drawable/layout_with_black_border"
+        android:gravity="center"
+        android:text="@string/n"
+        android:textColor="@color/items_txt"
+        android:textSize="@dimen/_12csp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lblItemName" />
+
+    <TextView
+        android:id="@+id/lblD"
+        android:layout_width="@dimen/_16cdp"
+        android:layout_height="@dimen/_24cdp"
+        android:layout_marginTop="@dimen/_4cdp"
+        android:background="@drawable/layout_with_black_border"
+        android:gravity="center"
+        android:text="@string/d"
+        android:textColor="@color/items_txt"
+        android:textSize="@dimen/_12csp"
+        app:layout_constraintStart_toStartOf="@id/lblN"
+        app:layout_constraintTop_toBottomOf="@id/lblN" />
+
+    <TextView
+        android:id="@+id/lblItemDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6cdp"
+        android:layout_marginEnd="@dimen/_4cdp"
+        android:text="Item name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/items_txt"
+        android:textSize="@dimen/_12csp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/lblItemName"
+        app:layout_constraintTop_toBottomOf="@id/lblItemName" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30cdp"
+        android:layout_marginTop="@dimen/_12cdp"
+        android:layout_marginEnd="@dimen/_16cdp"
+        android:background="@drawable/constraint_layout_bg"
+        android:backgroundTint="@color/text_color"
+        android:paddingHorizontal="@dimen/_16cdp"
+        android:text="@string/add"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_12csp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consQty"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30cdp"
+        android:layout_marginStart="@dimen/_8cdp"
+        android:layout_marginTop="@dimen/_8cdp"
+        android:layout_marginEnd="@dimen/_12cdp"
+        android:background="@drawable/layout_with_orange_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblDecreaseCnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12cdp"
+            android:layout_marginEnd="@dimen/_12cdp"
+            android:text="@string/decrease"
+            android:layout_marginBottom="@dimen/_16cdp"
+            android:gravity="center"
+            android:textColor="@color/items_txt"
+            android:textSize="@dimen/_30csp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lblitemCnt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblitemCnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8cdp"
+            android:layout_marginEnd="@dimen/_8cdp"
+            android:text="3"
+            android:textColor="@color/items_txt"
+            android:textSize="@dimen/_14csp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lblIncreaseCnt"
+            app:layout_constraintStart_toEndOf="@id/lblDecreaseCnt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/lblIncreaseCnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12cdp"
+            android:layout_marginEnd="@dimen/_12cdp"
+            android:text="@string/increase"
+            android:textColor="@color/items_txt"
+            android:textSize="@dimen/_20csp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lblitemCnt"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lblItemRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4cdp"
+        android:text="E 20"
+        android:textColor="@color/menu_bg"
+        android:textSize="@dimen/_16csp"
+        app:layout_constraintStart_toStartOf="@id/lblItemName"
+        app:layout_constraintTop_toBottomOf="@+id/lblItemDesc" />
+
+    <ImageView
+        android:id="@+id/imgChat"
+        android:layout_width="@dimen/_30cdp"
+        android:layout_height="@dimen/_30cdp"
+        android:layout_marginEnd="@dimen/_16cdp"
+        android:src="@drawable/chat_bubble_svg"
+        app:layout_constraintBottom_toBottomOf="@id/lblItemRate"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/_8cdp"
+        android:background="@color/items_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblItemRate"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_125cdp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_24cdp"
+                android:layout_height="@dimen/_24cdp"
+                android:layout_marginStart="@dimen/_8cdp"
+                android:layout_marginTop="@dimen/_16cdp"
+                android:src="@drawable/back_arrow_svg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="@dimen/_24cdp"
+                android:layout_height="@dimen/_24cdp"
+                android:layout_marginEnd="@dimen/_8cdp"
+                android:src="@drawable/share_svg"
+                app:layout_constraintBottom_toBottomOf="@id/imgBack"
+                app:layout_constraintEnd_toStartOf="@id/imgInfo" />
+
+            <ImageView
+                android:id="@+id/imgInfo"
+                android:layout_width="@dimen/_24cdp"
+                android:layout_height="@dimen/_24cdp"
+                android:layout_marginEnd="@dimen/_8cdp"
+                android:src="@drawable/info_svg"
+                app:layout_constraintBottom_toBottomOf="@id/imgBack"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16cdp"
+        android:background="@drawable/constraint_layout_bg"
+        android:elevation="@dimen/_8cdp"
+        android:layout_marginTop="@dimen/_70cdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/appBarLayout">
+
+        <TextView
+            android:id="@+id/lblRestuarantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12cdp"
+            android:text="@string/inka_restaurant"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_18csp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8cdp"
+            android:layout_marginEnd="@dimen/_2cdp"
+            android:drawableStart="@drawable/star_svg"
+            android:text="@string/rating_values"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14csp"
+            app:layout_constraintEnd_toStartOf="@id/lblPipe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblRestuarantName" />
+
+        <TextView
+            android:id="@+id/lblPipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2cdp"
+            android:text="@string/pipe_symbol"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16csp"
+            app:layout_constraintBaseline_toBaselineOf="@id/lblRating"
+            app:layout_constraintEnd_toStartOf="@id/lblOpenTimings"
+            app:layout_constraintStart_toEndOf="@id/lblRating" />
+
+        <TextView
+            android:id="@+id/lblOpenTimings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2cdp"
+            android:text="@string/open_timings"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14csp"
+            app:layout_constraintBaseline_toBaselineOf="@id/lblRating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lblPipe" />
+
+        <TextView
+            android:id="@+id/lblCallUsAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6cdp"
+            android:drawableStart="@drawable/call_svg"
+            android:drawablePadding="@dimen/_16cdp"
+            android:text="@string/reach_us_at"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_14csp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblPipe" />
+
+        <Button
+            android:id="@+id/btnBookATable"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30cdp"
+            android:layout_marginStart="@dimen/_16cdp"
+            android:layout_marginTop="@dimen/_8cdp"
+            android:layout_marginBottom="@dimen/_12cdp"
+            android:background="@drawable/constraint_layout_bg"
+            android:backgroundTint="@color/text_color"
+            android:paddingHorizontal="@dimen/_16cdp"
+            android:text="@string/book_a_table"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14csp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="@dimen/_8cdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblCallUsAt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/lblFoodCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12cdp"
+        android:text="@string/starter"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_16csp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/itemListRecycler"
+        app:layout_constraintTop_toBottomOf="@id/consRestaurant" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemListRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8cdp"
+        android:layout_marginStart="@dimen/_8cdp"
+        app:layout_constraintBottom_toTopOf="@+id/consViewCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblFoodCategory" />
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30cdp"
+        android:layout_marginBottom="@dimen/_16cdp"
+        android:background="@drawable/constraint_layout_bg"
+        android:backgroundTint="@color/menu_bg"
+        android:drawableStart="@drawable/dining_menu_svg"
+        android:drawablePadding="@dimen/_8cdp"
+        android:paddingHorizontal="@dimen/_16cdp"
+        android:text="@string/menu"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12csp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/consViewCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40cdp"
+        android:background="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/lblViewCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/cart_svg"
+            android:drawablePadding="@dimen/_8cdp"
+            android:text="@string/view_cart"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14csp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
