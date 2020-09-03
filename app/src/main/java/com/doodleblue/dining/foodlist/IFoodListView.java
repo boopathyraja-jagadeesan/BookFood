@@ -9,6 +9,10 @@ import java.util.List;
  */
 public interface IFoodListView {
 
+    /**
+     * Method to show list of food items.
+     * @param foodList - List of food items.
+     */
     void showFoodList(List<ItemListData> foodList);
 
 }

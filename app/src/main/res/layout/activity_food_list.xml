@@ -206,7 +206,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/consViewCart"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40cdp"
+        android:layout_height="@dimen/_50cdp"
         android:background="@color/text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

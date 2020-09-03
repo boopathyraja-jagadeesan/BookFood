@@ -45,6 +45,9 @@ public class CartActivity extends AppCompatActivity implements FoodItemListAdapt
         initView();
     }
 
+    /**
+     * Method to initialize the views.
+     */
     private void initView() {
         lblCartValue = findViewById(R.id.lblAmount);
         imgCartBack = findViewById(R.id.imgBack);
@@ -58,6 +61,9 @@ public class CartActivity extends AppCompatActivity implements FoodItemListAdapt
 
     }
 
+    /**
+     * Method to set adapter
+     */
     private void initAdapter() {
         if (foodItemList != null && foodItemList.size() > 0) {
            /* if (foodItemList.size() > 2) {
@@ -78,6 +84,9 @@ public class CartActivity extends AppCompatActivity implements FoodItemListAdapt
     }
 
 
+    /**
+     * Method to get the intent data
+     */
     private void getIntentData() {
         args = getIntent().getExtras();
 
@@ -89,6 +98,9 @@ public class CartActivity extends AppCompatActivity implements FoodItemListAdapt
         }
     }
 
+    /**
+     * Method to update cart details
+     */
     @Override
     public void updateCart() {
         float cartPrice = 0f;
@@ -130,6 +142,9 @@ public class CartActivity extends AppCompatActivity implements FoodItemListAdapt
         }
     }
 
+    /**
+     * Method to update the adapter.
+     */
     private void showAllItems() {
         lblShowMore.setVisibility(View.GONE);
         if (foodItemListAdapter != null) {

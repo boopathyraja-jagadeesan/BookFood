@@ -29,6 +29,7 @@ public class FoodListActivity extends AppCompatActivity implements IFoodListView
     private TextView lblViewCart = null;
     private List<ItemListData> foodItemList = null, selectedItem = null;
 
+
     private IFoodListPresenter foodListImpPresenter = null;
     private FoodItemListAdapter foodItemListAdapter = null;
 
@@ -36,10 +37,16 @@ public class FoodListActivity extends AppCompatActivity implements IFoodListView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_list);
+
         foodListRecyclerView = findViewById(R.id.itemListRecycler);
         consViewCart = findViewById(R.id.consViewCart);
         lblViewCart = findViewById(R.id.lblViewCart);
 
+        foodListImpPresenter = new FoodListImpPresenter(this);
+        foodListImpPresenter.getItemList();
+
+
+        /*Move to cart page on click*/
         consViewCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,8 +61,7 @@ public class FoodListActivity extends AppCompatActivity implements IFoodListView
             }
         });
 
-        foodListImpPresenter = new FoodListImpPresenter(this);
-        foodListImpPresenter.getItemList();
+
     }
 
     @Override
@@ -71,6 +77,9 @@ public class FoodListActivity extends AppCompatActivity implements IFoodListView
         }
     }
 
+    /**
+     * Method to update cart details
+     */
     @Override
     public void updateCart() {
         if (foodItemList != null) {

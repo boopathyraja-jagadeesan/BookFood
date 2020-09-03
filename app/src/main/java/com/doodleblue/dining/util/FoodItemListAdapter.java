@@ -178,6 +178,9 @@ public class FoodItemListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
 
     public interface FoodItemListener {
+        /**
+         * Method to update cart details (qty and price)
+         */
         void updateCart();
 
     }
